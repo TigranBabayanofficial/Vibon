@@ -1,0 +1,6 @@
+
+{% if not is_following %}
+  <form method="post" action="/follow/{{ user.id }}"><button>Follow</button></form>
+{% else %}
+  <form method="post" action="/unfollow/{{ user.id }}"><button>Unfollow</button></form>
+{% endif %}

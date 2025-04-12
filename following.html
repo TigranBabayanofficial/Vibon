@@ -1,0 +1,12 @@
+
+<h2>Following Feed</h2>
+<ul>
+{% for video in videos %}
+  <li>
+    <a href="/video/{{ video.id }}">{{ video.filename }}</a><br>
+    <video width="300" controls>
+      <source src="/static/uploads/{{ video.filename }}" type="video/mp4">
+    </video>
+  </li>
+{% endfor %}
+</ul>
